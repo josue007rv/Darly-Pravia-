@@ -6,23 +6,25 @@
   <title>Feliz Cumpleaños Darly 🎂</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'Quicksand', sans-serif;
       background: #ffeef4;
-      overflow: hidden;
       position: relative;
-      text-align: center;
+      overflow-x: hidden;
     }
 
     .background {
-      position: absolute;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background: linear-gradient(180deg, #fff0f5, #ffeef4);
       overflow: hidden;
       z-index: 0;
+      pointer-events: none;
     }
 
     .heart {
@@ -73,74 +75,47 @@
     .container {
       position: relative;
       z-index: 1;
-      padding: 2rem;
+      padding: 3rem 1.5rem 5rem;
+      min-height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
     }
 
     h1 {
       font-family: 'Pacifico', cursive;
       font-size: 2.5rem;
       color: #d6336c;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
     p {
       font-size: 1.2rem;
       color: #444;
-      margin: 1rem 0;
+      margin: 0.8rem 0;
+      max-width: 600px;
+      text-align: center;
     }
 
     .photo {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     .celebrate-btn {
       margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
+      padding: 0.9rem 1.7rem;
       font-size: 1rem;
       background-color: #ff85a2;
       color: white;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .celebrate-btn:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
-  <div class="background">
-    <!-- Corazones animados -->
-    <div class="heart" style="--pos: 0.1;"></div>
-    <div class="heart" style="--pos: 0.3;"></div>
-    <div class="heart" style="--pos: 0.5;"></div>
-    <div class="heart" style="--pos: 0.7;"></div>
-    <div class="heart" style="--pos: 0.9;"></div>
-  </div>
-
-  <div class="container">
-    <h1>🎉 ¡Feliz cumpleaños, Darly Pravia! 🎂</h1>
-    <p>
-      Hoy celebramos la hermosa luz que llevas dentro y todo el amor que regalas al mundo con tu sonrisa.  
-      Que este nuevo año te regale momentos felices, sueños cumplidos y mucho amor.
-    </p>
-    <p>
-      Siempre será un privilegio compartir la vida contigo.  
-      <br>Con todo mi cariño… ¡feliz vuelta al sol! 🌈✨
-    </p>
-
-    <!-- Reemplaza el link de abajo con tu imagen en GitHub -->
-    <img class="photo" src="https://raw.githubusercontent.com/josue007rv/Darly-Pravia-/refs/heads/main/Dp.jpg" alt="Foto de Darly" />
-    <img " alt="Foto de Darly" />
-
-    <br>
-    <button class="celebrate-btn" onclick="alert('¡Darly, que tu día esté lleno de amor y alegría! 💖')">🎊 ¡Toca para celebrar!</button>
-  </div>
-</body>
-</html>
+      transition: transform 0.2s
